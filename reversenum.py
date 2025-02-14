@@ -1,0 +1,1 @@
+print(f"The reversed number is: {input("Enter the number: ")[::-1]}")
