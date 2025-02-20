@@ -24,7 +24,7 @@ try:
   print(f"The Golden Ratio is: {fib[par-1]/fib[par-2]}")
 except:
    print(f"The Golden Ratio is: Undefined")
-a=""
+a="th"
 match par:
    case 2:
       a="nd"
@@ -32,4 +32,5 @@ match par:
       a="st"
    case 3:
       a="rd"
+   
 print(f"..so the way this actually works is that i first find the {str(par)+a} fibonnaci number and then divide it by the previous number.\n The reason this works is because as the fibonnaci series approaches infinity,\nthe ratio of two successive terms approaches golden ratio.")
