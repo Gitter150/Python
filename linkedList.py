@@ -1,12 +1,13 @@
 class doublyLinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
     class Node:
         def __init__(self, x):
             self.data = x
             self.next = None
             self.prev = None
-    def __init__(self):
-        self.head = None
-        self.tail = None
+
     def push_front(self, x: int):
         newNode = self.Node(x)
         newNode.next = self.head
