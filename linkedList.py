@@ -31,14 +31,14 @@ class doublyLinkedList:
             return
         curr = self.head
         while curr is not None:
-            print(f"{curr.data}", end = " ")
+            print(f"{curr.data}", end = "" if curr.next is None else " -> ")
             curr = curr.next
         print()
     
 if __name__ == "__main__":
     lst = doublyLinkedList()
-    for x in range(5,0,-1):
-        lst.push_front(x)
+    for x in range(5):
+        lst.push_back(x+1)
     lst.display()
 
         
