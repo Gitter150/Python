@@ -72,6 +72,24 @@ class doublyLinkedList:
             i += 1
         return -1
 
+    def dataAt(self, x: int) :
+        if not (0<=x<self.size):
+            raise ValueError("Invalid Index. Please enter a valid index")
+        curNode = None
+        if x < self.size / 2:
+            i = 0
+            curNode = self.head
+            while curNode.next and i < x:
+                curNode = curNode.next                 
+                i += 1 
+        else:
+            i = self.size - 1
+            curNode = self.tail
+            while curNode.prev and i > x:
+                curNode = curNode.prev
+                i -= 1
+        return curNode.data
+        
     def reverse(self):
         if self.size <= 1:
             return
@@ -93,10 +111,14 @@ class doublyLinkedList:
     
 if __name__ == "__main__":
     dll = doublyLinkedList()
-    for x in range(5):
-        dll.push(x+1)
+    dll.push(5)
+    dll.push(0)
+    dll.push(2)
+    dll.push(9)
+    dll.push(6)
     dll.display()
     print(dll.find(1))
+    print(dll.dataAt(2))
         
 
 
